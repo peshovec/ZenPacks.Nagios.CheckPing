@@ -20,7 +20,7 @@ True
 3
 </property>
 <property type="string" id="commandTemplate" mode="w" >
-check_ping -H $devname -w 180,100% -c 300,100% | sed -e 's# - Packet loss#|LOSS#;s#%,##;s#ms##;s# = #=#g'
+check_ping -H $devname -w 180,100% -c 300,100% | sed -e 's# - Packet loss#|LOSS#;s#%,##;s#ms##;s# = #=#g;s#|rta=.*$$##'
 </property>
 <property type="int" id="cycletime" mode="w" >
 300
